@@ -212,20 +212,20 @@ export default function AdminPlats() {
                     <Edit2 className="w-4 h-4" />
                   </button>
                   <button
-                    onClick={() => deleteDish(d.id)}
-                    title="Supprimer le plat"
-                    aria-label={`Supprimer ${d.name}`}
-                    className="text-red-600 hover:text-red-800"
-                  >
-                    <Trash2 className="w-4 h-4" />
-                  </button>
-                  <button
                     onClick={() => toggleAvailable(d.id, d.is_available)}
                     title={d.is_available ? 'Désactiver le plat' : 'Activer le plat'}
                     aria-label={d.is_available ? `Désactiver ${d.name}` : `Activer ${d.name}`}
                     className={d.is_available ? 'text-orange-600' : 'text-green-600'}
                   >
                     {d.is_available ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  </button>
+                  <button
+                    onClick={() => deleteDish(d.id)}
+                    title="Supprimer le plat"
+                    aria-label={`Supprimer ${d.name}`}
+                    className="text-red-600 hover:text-red-800"
+                  >
+                    <Trash2 className="w-4 h-4" />
                   </button>
                 </td>
               </tr>
